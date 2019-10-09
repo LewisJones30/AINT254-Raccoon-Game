@@ -8,6 +8,7 @@ public class DestroyTimeEvent : MonoBehaviour
 
     public float time = 1;
     public bool repeat = false;
+
     private void Start()
     {
         if (repeat)

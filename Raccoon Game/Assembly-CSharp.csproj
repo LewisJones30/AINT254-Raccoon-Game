@@ -55,7 +55,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\DecayFood.cs" />
      <Compile Include="Assets\DestroyTimeEvent.cs" />
+     <Compile Include="Assets\MovementScript.cs" />
      <Compile Include="Assets\SpawnObjects.cs" />
      <Compile Include="Assets\TimerEvent.cs" />
  <Reference Include="Unity.Timeline.Editor">

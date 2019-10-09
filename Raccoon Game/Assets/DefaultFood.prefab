@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 7795615348888997113}
   - component: {fileID: 6676031472399845895}
   - component: {fileID: 6242868193248134367}
-  - component: {fileID: 781264198922520315}
+  - component: {fileID: -3496900519037204124}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: DefaultFood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ae851f57ed3afff4c9e70fe2b3e27db0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -110,7 +110,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &781264198922520315
+--- !u!114 &-3496900519037204124
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,8 +119,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5118006656589008441}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fe85360e450f6845ace70e3391558a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 95e17f5b23f36454983b0367332f6d7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   time: 5
   repeat: 0
+  decayedFood: {fileID: 5118006656589008441, guid: 77dc6dd755ab4b540b3ee38bfefeabb1,
+    type: 3}
