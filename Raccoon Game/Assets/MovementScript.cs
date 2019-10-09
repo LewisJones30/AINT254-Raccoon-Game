@@ -16,9 +16,9 @@ public class MovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("d"))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
-            player.velocity = transform.right * speed;
+            transform.position += transform.TransformDirection(Vector3.forward) * Time.deltaTime * speed;
         }
     }
 }
