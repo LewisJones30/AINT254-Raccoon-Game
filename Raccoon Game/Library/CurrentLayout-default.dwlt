@@ -98,7 +98,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 494}
   m_MaxSize: {x: 18008, y: 14044}
   vertical: 0
-  controlID: 116
+  controlID: 139
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -550,8 +550,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 6afbffff
-      m_LastClickedID: -1174
+      m_SelectedIDs: c02f0000
+      m_LastClickedID: 12224
       m_ExpandedIDs: 78fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -612,9 +612,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.76336414, y: 1.6062075, z: 1.504202}
+    m_Target: {x: 1.0696735, y: 3.7594042, z: -1.6541371}
     speed: 2
-    m_Value: {x: -0.76336414, y: 1.6062075, z: 1.504202}
+    m_Value: {x: 1.0696735, y: 3.7594042, z: -1.6541371}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -643,13 +643,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.113136016, y: 0.6713138, z: -0.10476354, w: 0.7249616}
+    m_Target: {x: 0.32568344, y: -0.019857889, z: 0.006841876, w: 0.9452493}
     speed: 2
-    m_Value: {x: 0.113135636, y: 0.67131156, z: -0.10476319, w: 0.72495914}
+    m_Value: {x: 0.32568228, y: -0.019857818, z: 0.0068418514, w: 0.9452459}
   m_Size:
-    m_Target: 5.7714877
+    m_Target: 10.407098
     speed: 2
-    m_Value: 5.7714877
+    m_Value: 10.407098
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -721,8 +721,8 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
-    m_HSlider: 0
-    m_VSlider: 0
+    m_HSlider: 1
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
@@ -735,18 +735,18 @@ MonoBehaviour:
       y: 17
       width: 508
       height: 340
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 254, y: 170}
+    m_Scale: {x: 1.184415, y: 1.184415}
+    m_Translation: {x: 230.4525, y: 201.35054}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -254
+      x: -194.57074
       y: -170
-      width: 508
-      height: 340
+      width: 428.90372
+      height: 287.06155
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
