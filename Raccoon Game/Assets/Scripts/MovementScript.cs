@@ -20,12 +20,10 @@ public class MovementScript : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow))
         {
             rb.AddRelativeForce(new Vector3(0.0f, 0.0f, movementSpeed * 10));
-            Debug.Log(rb.velocity);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.Rotate(new Vector3(0.0f, (Input.GetAxis("Horizontal")) * 2, 0.0f));
-            Debug.Log(new Vector3(0.0f, Input.GetAxis("Horizontal") * -2, 0.0f));
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
@@ -34,7 +32,6 @@ public class MovementScript : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Rotate(new Vector3(0.0f, (Input.GetAxis("Horizontal")) * 2, 0.0f));
-            Debug.Log(new Vector3(0.0f, Input.GetAxis("Horizontal") * 2, 0.0f));
         }
         //Detects if the key has been lifted. Immediately stops the rigidbody's force to better simulate player movement.
         if (Input.GetKeyUp(KeyCode.UpArrow))

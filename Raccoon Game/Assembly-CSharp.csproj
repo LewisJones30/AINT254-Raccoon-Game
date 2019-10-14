@@ -62,14 +62,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AddScore.cs" />
-    <Compile Include="Assets\CollisionDetection.cs" />
-    <Compile Include="Assets\DecayFood.cs" />
-    <Compile Include="Assets\DestroyScript.cs" />
-    <Compile Include="Assets\DestroyTimeEvent.cs" />
-    <Compile Include="Assets\MovementScript.cs" />
-    <Compile Include="Assets\SpawnObjects.cs" />
-    <Compile Include="Assets\TimerEvent.cs" />
+    <Compile Include="Assets\Scripts\AddScore.cs" />
+    <Compile Include="Assets\Scripts\CollisionDetection.cs" />
+    <Compile Include="Assets\Scripts\DecayFood.cs" />
+    <Compile Include="Assets\Scripts\DestroyScript.cs" />
+    <Compile Include="Assets\Scripts\DestroyTimeEvent.cs" />
+    <Compile Include="Assets\Scripts\MovementScript.cs" />
+    <Compile Include="Assets\Scripts\SpawnObjects.cs" />
+    <Compile Include="Assets\Scripts\TimerEvent.cs" />
+    <Compile Include="Assets\Scripts\UIScript.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Lewis/Documents/GitHub/AINT254-Raccoon-Game/Raccoon Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
