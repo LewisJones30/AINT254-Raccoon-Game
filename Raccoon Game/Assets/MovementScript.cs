@@ -19,19 +19,39 @@ public class MovementScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            rb.MovePosition(transform.position + (Vector3.forward * movementSpeed * Time.deltaTime));
+            rb.AddRelativeForce(new Vector3(0.0f, 0.0f, movementSpeed * 10));
+            Debug.Log(rb.velocity);
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            rb.MovePosition(transform.position + (Vector3.right * movementSpeed * Time.deltaTime));
+            transform.Rotate(new Vector3(0.0f, (Input.GetAxis("Horizontal")) * 2, 0.0f));
+            Debug.Log(new Vector3(0.0f, Input.GetAxis("Horizontal") * -2, 0.0f));
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            rb.MovePosition(transform.position + (Vector3.back * movementSpeed * Time.deltaTime));
+            rb.AddRelativeForce(new Vector3(0.0f, 0.0f, movementSpeed * -10));
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            rb.MovePosition(transform.position + (Vector3.left * movementSpeed * Time.deltaTime));
+            transform.Rotate(new Vector3(0.0f, (Input.GetAxis("Horizontal")) * 2, 0.0f));
+            Debug.Log(new Vector3(0.0f, Input.GetAxis("Horizontal") * 2, 0.0f));
+        }
+        //Detects if the key has been lifted. Immediately stops the rigidbody's force to better simulate player movement.
+        if (Input.GetKeyUp(KeyCode.UpArrow))
+        {
+            rb.Sleep();
+        }
+        if (Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            rb.Sleep();
+        }
+        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            rb.Sleep();
+        }
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            rb.Sleep();
         }
     }
     //private void OnCollisionEnter(Collision other)
