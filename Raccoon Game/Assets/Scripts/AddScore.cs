@@ -14,7 +14,7 @@ public class AddScore : MonoBehaviour
     public void AddPoint()
     {
         score = score + 1;
-        if (score > 10)
+        if (score > 9)
         {
             onGameCompletion.Invoke();
         }
