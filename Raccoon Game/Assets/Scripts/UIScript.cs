@@ -21,4 +21,16 @@ public class UIScript : MonoBehaviour
         //Load the first level
         SceneManager.LoadScene("Level 1");
     }
+    public void EndGame()
+    {
+        SceneManager.LoadScene("GameWinScene");
+    }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Starting Scene");
+    }
+    public void LoseGame()
+    {
+        SceneManager.LoadScene("GameLoseScene");
+    }
 }
