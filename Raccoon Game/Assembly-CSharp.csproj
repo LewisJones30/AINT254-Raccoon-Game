@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\DestroyTimeEvent.cs" />
     <Compile Include="Assets\Scripts\MovementScript.cs" />
     <Compile Include="Assets\Scripts\SpawnObjects.cs" />
+    <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\TimerEvent.cs" />
     <Compile Include="Assets\Scripts\UIScript.cs" />
     <Reference Include="Unity.Timeline.Editor">
