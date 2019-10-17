@@ -15,14 +15,16 @@ public class SpawnObjects : MonoBehaviour
         if (randomInt < 5)
         {
             Rigidbody rb;
-            Instantiate(healthySpawn, transform.position, transform.rotation);
-            rb = this.GetComponent<Rigidbody>();
-            rb.AddRelativeForce(new Vector3(Random.Range(1, 1500), Random.Range(1, 1500), Random.Range(1, 1500)));
+            GameObject spawnedBall = Instantiate(healthySpawn, transform.position, transform.rotation);
+            rb = spawnedBall.GetComponent<Rigidbody>();
+            rb.AddRelativeForce(new Vector3(Random.Range(1, 50), Random.Range(1, 50), Random.Range(1, 50)));
         }
         else
         {
-            Instantiate(decayedSpawn, transform.position, transform.rotation);
-            decayedSpawn.GetComponent<Rigidbody>().AddRelativeForce(new Vector3(Random.Range(1,1500), Random.Range(1,1500), Random.Range(1,1500)));
+            Rigidbody rb;
+            GameObject spawnedBall = Instantiate(decayedSpawn, transform.position, transform.rotation);
+            rb = spawnedBall.GetComponent<Rigidbody>();
+            rb.AddRelativeForce(new Vector3(Random.Range(1, 50), Random.Range(1, 50), Random.Range(1, 50)));
         }
     }
 }
