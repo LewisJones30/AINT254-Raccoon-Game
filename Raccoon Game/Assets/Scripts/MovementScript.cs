@@ -6,56 +6,32 @@ public class MovementScript : MonoBehaviour
 {
 
     Rigidbody player;
-    public float movementSpeed = 2;
+    public float movementSpeed = 15; //Multiplier for movement speed
+    public float rotationSpeed = 10; //Multiplier for rotation speed
     public Rigidbody rb;
-    // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            rb.AddRelativeForce(new Vector3(0.0f, 0.0f, movementSpeed));
+            rb.AddRelativeForce(new Vector3(0.0f, 0.0f, movementSpeed * - 1));
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.Rotate(new Vector3(0.0f, (Input.GetAxis("Horizontal") * 0.25f), 0.0f));
+            transform.Rotate(new Vector3(0.0f, (Input.GetAxis("Horizontal") * rotationSpeed * Time.fixedDeltaTime), 0.0f));
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            rb.AddRelativeForce(new Vector3(0.0f, 0.0f, movementSpeed * -1));
+            rb.AddRelativeForce(new Vector3(0.0f, 0.0f, movementSpeed));
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.Rotate(new Vector3(0.0f, (Input.GetAxis("Horizontal") * 0.25f), 0.0f));
+            transform.Rotate(new Vector3(0.0f, (Input.GetAxis("Horizontal") * rotationSpeed * Time.fixedDeltaTime), 0.0f));
         }
-        //Detects if the key has been lifted. Immediately stops the rigidbody's force to better simulate player movement.
-        ///if (Input.GetKeyUp(KeyCode.UpArrow))
-        //{
-        //    rb.Sleep();
-        //}
-        //if (Input.GetKeyUp(KeyCode.DownArrow))
-        //{
-        //    rb.Sleep();
-        //}
-        //if (Input.GetKeyUp(KeyCode.LeftArrow))
-        //{
-        //    rb.Sleep();
-        //}
-        //if (Input.GetKeyUp(KeyCode.RightArrow))
-        //{
-        //    rb.Sleep();
-        //} 
     }
-    //private void OnCollisionEnter(Collision other)
-    //{
-      //  if (other.gameObject.name == "DecayedFood")
-        //    SendMessage("Collision Detected!");
-        //Destroy(other);
-    //}
 }
 

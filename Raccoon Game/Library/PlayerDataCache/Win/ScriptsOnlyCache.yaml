@@ -141,6 +141,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
@@ -725,5 +727,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level 1.unity
   - Assets/Scenes/GameWinScene.unity
   - Assets/Scenes/GameLoseScene.unity
-  playerPath: C:/Users/ljones30/Documents/GitHub/AINT254-Raccoon-Game/Test Build/Raccoon
+  playerPath: C:/Users/Lewis/Documents/GitHub/AINT254-Raccoon-Game/Current Build/Raccoon
     Game.exe
