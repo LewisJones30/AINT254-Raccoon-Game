@@ -18,8 +18,13 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         timeLeft -= Time.deltaTime;
-        timeLeftText.text = "Time Remaining: " + timeLeft.ToString("F2");
+        int minutes = Mathf.FloorToInt(timeLeft / 60f);
+        int seconds = Mathf.FloorToInt(timeLeft - minutes * 60);
+        string timeLeftString = string.Format("{0:00}:{1:00}", minutes, seconds);
+        timeLeftText.text = "Time remaining: " + timeLeftString;
+      
         if (timeLeft < 40)
         {
             timeLeftText.color = Color.yellow;
