@@ -25,8 +25,11 @@ public class SceneNav : MonoBehaviour
     public void WinGame() //Runs when the player gets the objective completed.
     {
         PlayerPrefs.SetFloat("PlayerTime", timerScript.timeTaken); //Set player's time to be read in the new scene.
-        if (PlayerPrefs.GetFloat("BestTime") <  timerScript.timeTaken)
+        Debug.Log(PlayerPrefs.GetFloat("BestTime"));
+        Debug.Log(PlayerPrefs.GetFloat("PlayerTime"));
+        if (PlayerPrefs.GetFloat("BestTime") > PlayerPrefs.GetFloat("PlayerTime"))
         {
+
             PlayerPrefs.SetFloat("BestTime", timerScript.timeTaken);
             PlayerPrefs.SetInt("NewBest", 1); //Boolean to say if new high score, to inform user of this.
         }

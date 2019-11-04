@@ -1,18 +1,18 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - AddScore
     - CollisionDetection
     - DecayFood
     - DestroyTimeEvent
+    - GetBestTime
     - MovementScript
+    - SceneNav
+    - ScoringAndHealth
     - SpawnObjects
     - Timer
     - TimerEvent
-    - UIScript
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -42,21 +42,21 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9662}
+      Script: {instanceID: 9694}
     - Class: 114
-      Script: {instanceID: 9812}
+      Script: {instanceID: 9844}
     - Class: 114
-      Script: {instanceID: 9852}
+      Script: {instanceID: 9884}
     - Class: 114
-      Script: {instanceID: 10222}
+      Script: {instanceID: 10254}
     - Class: 114
-      Script: {instanceID: 10548}
+      Script: {instanceID: 10580}
     - Class: 114
-      Script: {instanceID: 10562}
+      Script: {instanceID: 10594}
     - Class: 114
-      Script: {instanceID: 11002}
+      Script: {instanceID: 11036}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11382}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -91,21 +91,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9662}
+      Script: {instanceID: 9694}
     - Class: 114
-      Script: {instanceID: 9812}
+      Script: {instanceID: 9844}
     - Class: 114
-      Script: {instanceID: 9852}
+      Script: {instanceID: 9884}
     - Class: 114
-      Script: {instanceID: 10222}
+      Script: {instanceID: 10254}
     - Class: 114
-      Script: {instanceID: 10548}
+      Script: {instanceID: 10580}
     - Class: 114
-      Script: {instanceID: 10562}
+      Script: {instanceID: 10594}
     - Class: 114
-      Script: {instanceID: 11002}
+      Script: {instanceID: 10958}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11036}
+    - Class: 114
+      Script: {instanceID: 11382}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -154,33 +156,33 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9662}
+      Script: {instanceID: 9694}
     - Class: 114
-      Script: {instanceID: 9692}
+      Script: {instanceID: 9724}
     - Class: 114
-      Script: {instanceID: 9812}
+      Script: {instanceID: 9844}
     - Class: 114
-      Script: {instanceID: 9882}
+      Script: {instanceID: 9914}
     - Class: 114
-      Script: {instanceID: 10088}
+      Script: {instanceID: 10120}
     - Class: 114
-      Script: {instanceID: 10222}
+      Script: {instanceID: 10254}
     - Class: 114
-      Script: {instanceID: 10340}
+      Script: {instanceID: 10372}
     - Class: 114
-      Script: {instanceID: 10548}
+      Script: {instanceID: 10580}
     - Class: 114
-      Script: {instanceID: 10890}
+      Script: {instanceID: 10922}
     - Class: 114
-      Script: {instanceID: 11002}
+      Script: {instanceID: 11036}
     - Class: 114
-      Script: {instanceID: 11024}
+      Script: {instanceID: 11058}
     - Class: 114
-      Script: {instanceID: 11164}
+      Script: {instanceID: 11198}
     - Class: 114
-      Script: {instanceID: 11274}
+      Script: {instanceID: 11308}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11382}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -217,21 +219,21 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9662}
+      Script: {instanceID: 9694}
     - Class: 114
-      Script: {instanceID: 9812}
+      Script: {instanceID: 9844}
     - Class: 114
-      Script: {instanceID: 9852}
+      Script: {instanceID: 9884}
     - Class: 114
-      Script: {instanceID: 10222}
+      Script: {instanceID: 10254}
     - Class: 114
-      Script: {instanceID: 10548}
+      Script: {instanceID: 10580}
     - Class: 114
-      Script: {instanceID: 10562}
+      Script: {instanceID: 10594}
     - Class: 114
-      Script: {instanceID: 11002}
+      Script: {instanceID: 11036}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11382}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -339,7 +341,7 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: bbbea5b23667b0a286ead4f21ad81c66
+      Hash: 4d33b65a6eaec0c512d2b2671ba289c2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Timer
@@ -453,7 +455,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 220f94dbecf63a596641a888b73f43cc
+      Hash: fcb971cf59f60d39a7bb71c1eec1b7d0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MovementScript
@@ -501,10 +503,10 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: a8f95dab10a36e71b633da70a3c0ec69
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: UIScript
+    className: SceneNav
   - hash:
       serializedVersion: 2
       Hash: 516824a435828eadd660ef2f1658a48e
@@ -579,6 +581,12 @@ ScriptsOnlyBuild:
     className: DecayFood
   - hash:
       serializedVersion: 2
+      Hash: 0fb42739ec60d617392aa12b56c1e817
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GetBestTime
+  - hash:
+      serializedVersion: 2
       Hash: ee0cef6caaac8ae485bfa82f000f0f7b
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -624,7 +632,7 @@ ScriptsOnlyBuild:
       Hash: ef547abc019208793517215e06dc6f31
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: AddScore
+    className: ScoringAndHealth
   - hash:
       serializedVersion: 2
       Hash: 5372ed2ce39229b1ac910757999a8be2
@@ -727,5 +735,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level 1.unity
   - Assets/Scenes/GameWinScene.unity
   - Assets/Scenes/GameLoseScene.unity
-  playerPath: C:/Users/Lewis/Documents/GitHub/AINT254-Raccoon-Game/Current Build/Raccoon
-    Game.exe
+  playerPath: C:/Users/Lewis/Documents/Raccoon Game Upload/Raccoon Game.exe
