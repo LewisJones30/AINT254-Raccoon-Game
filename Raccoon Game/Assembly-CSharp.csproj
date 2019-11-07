@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\SpawnObjects.cs" />
     <Compile Include="Assets\Scripts\Timer.cs" />
     <Compile Include="Assets\Scripts\TimerEvent.cs" />
+    <None Include="Assets\ProjectSettings\ProjectVersion.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Lewis/Documents/GitHub/AINT254-Raccoon-Game/Raccoon Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
