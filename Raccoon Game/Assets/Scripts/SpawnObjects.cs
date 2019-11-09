@@ -18,7 +18,7 @@ public class SpawnObjects : MonoBehaviour
             Rigidbody rb;
             GameObject spawnedBall = Instantiate(healthySpawn, transform.position, transform.rotation);
             rb = spawnedBall.GetComponent<Rigidbody>();
-            rb.AddRelativeForce(new Vector3(Random.Range(1, 50), Random.Range(1, 50), Random.Range(1, 50)));
+            rb.AddRelativeForce(new Vector3(Random.Range(1, 25), Random.Range(1, 25), Random.Range(1, 25)));
         }
         else
         {
@@ -26,7 +26,7 @@ public class SpawnObjects : MonoBehaviour
             Rigidbody rb;
             GameObject spawnedBall = Instantiate(decayedSpawn, transform.position, transform.rotation);
             rb = spawnedBall.GetComponent<Rigidbody>();
-            rb.AddRelativeForce(new Vector3(Random.Range(1, 50), Random.Range(1, 50), Random.Range(1, 50)));
+            rb.AddRelativeForce(new Vector3(Random.Range(1, 25), Random.Range(1, 25), Random.Range(1, 25)));
         }
     }
 }
