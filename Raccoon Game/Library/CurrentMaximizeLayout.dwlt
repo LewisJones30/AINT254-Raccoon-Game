@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 581, y: 450}
-  m_MaxSize: {x: 14002, y: 14022}
+  m_MinSize: {x: 581, y: 472}
+  m_MaxSize: {x: 14004, y: 14044}
   vertical: 0
-  controlID: 23337
+  controlID: 3747
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -127,10 +127,10 @@ MonoBehaviour:
     y: 0
     width: 1486
     height: 947
-  m_MinSize: {x: 304, y: 450}
-  m_MaxSize: {x: 10000, y: 14022}
+  m_MinSize: {x: 304, y: 472}
+  m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 23338
+  controlID: 3748
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_MinSize: {x: 304, y: 200}
   m_MaxSize: {x: 8004, y: 4022}
   vertical: 0
-  controlID: 23339
+  controlID: 3749
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -213,7 +213,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2415ffff2615ffffa217ffffa417ffffac1effffb21effff2254ffff1477ffffcc82fffffa9affffa29fffff66fbffff78fbffffcc300000
+      m_ExpandedIDs: 68fbffff6afbffff26330000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -301,9 +301,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -24.099695, y: 16.18112, z: 55.42184}
+    m_Target: {x: -1335.4557, y: -1144.3533, z: 79.91692}
     speed: 2
-    m_Value: {x: -24.099695, y: 16.18112, z: 55.42184}
+    m_Value: {x: -1335.4557, y: -1144.3533, z: 79.91692}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_DoValidateTrueMetals: 0
   m_SceneViewState:
     showFog: 1
-    showMaterialUpdate: 0
+    showMaterialUpdate: 1
     showSkybox: 1
     showFlares: 1
     showImageEffects: 1
@@ -332,13 +332,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.19324437, y: 0.7549279, z: -0.25478995, w: 0.5725644}
+    m_Target: {x: 0.25876963, y: -0.64504045, z: 0.24722537, w: 0.67516994}
     speed: 2
-    m_Value: {x: 0.19324365, y: 0.7549251, z: -0.254789, w: 0.57256234}
+    m_Value: {x: 0.25876787, y: -0.64503604, z: 0.24722369, w: 0.67516536}
   m_Size:
-    m_Target: 7.7847185
+    m_Target: 1809.0405
     speed: 2
-    m_Value: 7.7847185
+    m_Value: 1809.0405
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -409,8 +409,8 @@ MonoBehaviour:
     y: 675
     width: 1486
     height: 272
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
+  m_MinSize: {x: 232, y: 272}
+  m_MaxSize: {x: 10002, y: 10022}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
@@ -456,11 +456,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Lewis\Documents\GitHub\AINT254-Raccoon-Game\Raccoon
     Game
@@ -468,9 +468,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 55}
-    m_SelectedIDs: da2d0000
-    m_LastClickedID: 11738
-    m_ExpandedIDs: 00000000d22c0000e22d000000ca9a3b
+    m_SelectedIDs: 6c2e0000
+    m_LastClickedID: 11884
+    m_ExpandedIDs: 00000000e42c0000fc2d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -498,7 +498,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d22c0000e22d000000ca9a3b
+    m_ExpandedIDs: 00000000e42c0000fc2d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -523,10 +523,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 2815ffff
-    m_LastClickedInstanceID: -60120
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300000e3a0000e42c0000d02c000010320000ce2d0000b62d000000000000
+    m_SelectedInstanceIDs: 9a320000
+    m_LastClickedInstanceID: 12954
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c62300000e3a0000e42c0000d02c000010320000ce2d0000b62d00000c31000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

@@ -33,5 +33,6 @@ public class MovementScript : MonoBehaviour
             transform.Rotate(new Vector3(0.0f, (Input.GetAxis("Horizontal") * rotationSpeed * Time.fixedDeltaTime), 0.0f));
         }
     }
+
 }
 

@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CollisionDetection.cs" />
+    <Compile Include="Assets\Scripts\countdownScript.cs" />
     <Compile Include="Assets\Scripts\DecayFood.cs" />
     <Compile Include="Assets\Scripts\DestroyScript.cs" />
     <Compile Include="Assets\Scripts\DestroyTimeEvent.cs" />
