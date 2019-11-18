@@ -10,14 +10,15 @@ public class CollisionDetection : MonoBehaviour
     public UnityEvent onCollisionDecayed;
     public GameObject player;
     public MovementScript movement;
-    public Text powerupText;
+    public Text doublePointsText, doubleSpeedText;
     public ScoringAndHealth scoringScript;
     // Start is called before the first frame update
     void Start()
     {
         movement = player.GetComponent<MovementScript>();
         scoringScript = player.GetComponent<ScoringAndHealth>();
-        powerupText.enabled = false; //Disable text until called
+        doublePointsText.enabled = false; //Disable text until called
+        doubleSpeedText.enabled = false;
     }
 
     // Update is called once per frame
@@ -28,7 +29,7 @@ public class CollisionDetection : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.name == "DefaultFood(Clone)")
+        if (other.gameObject.name == "HealthyFood(Clone)" || other.gameObject.name == "HealthyFood") //Second check is to ensure if it is added in directly it will work
         {
 
             //Collision Detection - Add to score
@@ -56,24 +57,24 @@ public class CollisionDetection : MonoBehaviour
         IEnumerator doublePoints() //Double points script
         {
             scoringScript.doublePoints = true;
-            powerupText.text = "Double points active!";
-            powerupText.enabled = true;
-            powerupText.color = Color.green;
+            doublePointsText.text = "Double points active!";
+            doublePointsText.enabled = true;
+            doublePointsText.color = Color.green;
             yield return new WaitForSeconds(10); //Stay active for 10 seconds. Manually adjusted here.
             scoringScript.doublePoints = false;
-            powerupText.enabled = false;
+            doublePointsText.enabled = false;
         }
         IEnumerator doubleSpeedPowerup() //Double speed script
         {
             
             float doublespeed = movement.movementSpeed * 2;
             movement.movementSpeed = doublespeed;
-            powerupText.text = "Double speed active!";
-            powerupText.enabled = true;
-            powerupText.color = Color.cyan;
+            doubleSpeedText.text = "Double speed active!";
+            doubleSpeedText.enabled = true;
+            doubleSpeedText.color = Color.cyan;
             yield return new WaitForSeconds(10); //10 second activation time for double speed. Manually adjusted here.
             movement.movementSpeed = doublespeed / 2;
-            powerupText.enabled = false;
+            doublePointsText.enabled = false;
         }
 
 

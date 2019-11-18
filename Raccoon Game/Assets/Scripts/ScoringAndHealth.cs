@@ -10,7 +10,7 @@ public class ScoringAndHealth : MonoBehaviour
     public int health = 3;
     public Text scoreText, healthText;
     public UnityEvent onZeroHealth, onGameCompletion;
-    public bool doublePoints = false; //This will be changed through the double points routine in collision detection.
+    public bool doublePoints = true; //This will be changed through the double points routine in collision detection.
     // Start is called before the first frame update
     public void AddPoint()
     {

@@ -574,9 +574,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5b551b3ada3cc8429ae7f2410ae4a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthySpawn: {fileID: 5118006656589008441, guid: 044e23ea5cb31524abcaf0ee7274cb13,
+  healthySpawn: {fileID: 6004171690997320956, guid: ba5dd07f9ace5fe458e9ac6c880bd992,
     type: 3}
-  decayedSpawn: {fileID: 5118006656589008441, guid: 77dc6dd755ab4b540b3ee38bfefeabb1,
+  decayedSpawn: {fileID: 3459353735901196210, guid: e84283c0c0b25754191a1772d6edb6cf,
+    type: 3}
+  doublePoints: {fileID: 0}
+  doubleSpeed: {fileID: 3459353735901196210, guid: 57ea250587b7f1141a5317dfc596c135,
     type: 3}
 --- !u!114 &765291718923926772
 MonoBehaviour:
