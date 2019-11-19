@@ -23,7 +23,7 @@ public class SpawnObjects : MonoBehaviour
         {
             //Spawn a healthy object
             Rigidbody rb;
-            GameObject spawnedBall = Instantiate(healthySpawn, transform.position, transform.rotation);
+            GameObject spawnedBall = Instantiate(decayedSpawn, transform.position, transform.rotation);
             rb = spawnedBall.GetComponent<Rigidbody>();
             rb.AddRelativeForce(new Vector3(Random.Range(1, 25), Random.Range(1, 25), Random.Range(1, 25)));
         }
@@ -31,11 +31,11 @@ public class SpawnObjects : MonoBehaviour
         {
             //Spawn a decayed object
             Rigidbody rb;
-            GameObject spawnedBall = Instantiate(decayedSpawn, transform.position, transform.rotation);
+            GameObject spawnedBall = Instantiate(healthySpawn, transform.position, transform.rotation);
             rb = spawnedBall.GetComponent<Rigidbody>();
             rb.AddRelativeForce(new Vector3(Random.Range(1, 25), Random.Range(1, 25), Random.Range(1, 25)));
         }
-        else //Roll of 96-100
+        else //Roll of 96-100, powerup table is instead triggered
         {
             int powerupint = Random.Range(1, 100); //Select a second integer between 1 and 100 so it can be easily split. For future development, this can be changed to the number of powerups.
             if (powerupint < 50)

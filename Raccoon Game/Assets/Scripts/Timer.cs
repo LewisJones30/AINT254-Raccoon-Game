@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
     public float timeLeft = 60.0f;
     public Text timeLeftText;
     public float timeTaken = 0.0f;
-
+    
     // Start is called before the first frame update
     void Start()
     {

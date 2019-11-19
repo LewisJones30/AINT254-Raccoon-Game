@@ -2,8 +2,6 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CollisionDetection
-    - DecayFood
-    - DestroyTimeEvent
     - GetBestTime
     - MovementScript
     - SceneNav
@@ -11,8 +9,10 @@ ScriptsOnlyBuild:
     - SpawnObjects
     - Timer
     - TimerEvent
+    - mainMenuUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -50,13 +50,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10254}
     - Class: 114
-      Script: {instanceID: 10580}
+      Script: {instanceID: 10582}
     - Class: 114
-      Script: {instanceID: 10594}
+      Script: {instanceID: 10596}
     - Class: 114
-      Script: {instanceID: 11036}
+      Script: {instanceID: 11038}
     - Class: 114
-      Script: {instanceID: 11382}
+      Script: {instanceID: 11384}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -99,15 +99,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10254}
     - Class: 114
-      Script: {instanceID: 10580}
+      Script: {instanceID: 10582}
     - Class: 114
-      Script: {instanceID: 10594}
+      Script: {instanceID: 10596}
     - Class: 114
-      Script: {instanceID: 10958}
+      Script: {instanceID: 10960}
     - Class: 114
-      Script: {instanceID: 11036}
+      Script: {instanceID: 11038}
     - Class: 114
-      Script: {instanceID: 11382}
+      Script: {instanceID: 11384}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -147,6 +147,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
@@ -155,10 +157,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
+    - Class: 111
+      Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 9694}
-    - Class: 114
-      Script: {instanceID: 9724}
     - Class: 114
       Script: {instanceID: 9844}
     - Class: 114
@@ -168,28 +170,32 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10254}
     - Class: 114
-      Script: {instanceID: 10372}
+      Script: {instanceID: 10374}
     - Class: 114
-      Script: {instanceID: 10580}
+      Script: {instanceID: 10582}
     - Class: 114
-      Script: {instanceID: 10922}
+      Script: {instanceID: 10960}
     - Class: 114
-      Script: {instanceID: 11036}
+      Script: {instanceID: 11038}
     - Class: 114
-      Script: {instanceID: 11058}
+      Script: {instanceID: 11060}
     - Class: 114
-      Script: {instanceID: 11198}
+      Script: {instanceID: 11200}
     - Class: 114
-      Script: {instanceID: 11308}
+      Script: {instanceID: 11310}
     - Class: 114
-      Script: {instanceID: 11382}
+      Script: {instanceID: 11384}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
-    - Class: 135
+    - Class: 136
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -199,7 +205,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 258
       Script: {instanceID: 0}
-    Assets/Scenes/Starting Scene.unity:
+    Assets/Scenes/LevelSelect.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -227,13 +233,60 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10254}
     - Class: 114
-      Script: {instanceID: 10580}
+      Script: {instanceID: 10596}
     - Class: 114
-      Script: {instanceID: 10594}
+      Script: {instanceID: 11038}
     - Class: 114
-      Script: {instanceID: 11036}
+      Script: {instanceID: 11384}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/StartingScene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11382}
+      Script: {instanceID: 9694}
+    - Class: 114
+      Script: {instanceID: 9844}
+    - Class: 114
+      Script: {instanceID: 9884}
+    - Class: 114
+      Script: {instanceID: 10254}
+    - Class: 114
+      Script: {instanceID: 10596}
+    - Class: 114
+      Script: {instanceID: 11038}
+    - Class: 114
+      Script: {instanceID: 11384}
+    - Class: 114
+      Script: {instanceID: 17104}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -401,7 +454,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 159f54a65a710111997a952273f83d5f
+      Hash: 602552e53e730f0a6bd1a833088fe1b7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SpawnObjects
@@ -453,6 +506,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: countdownScript
   - hash:
       serializedVersion: 2
       Hash: fcb971cf59f60d39a7bb71c1eec1b7d0
@@ -629,7 +688,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: ef547abc019208793517215e06dc6f31
+      Hash: 153a6214e6f75a8afd379536a56db841
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ScoringAndHealth
@@ -647,7 +706,7 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
-      Hash: 2b541e043a8ad2846ab84d5249b45307
+      Hash: 073ede8664afee6537d27ef2c1061370
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CollisionDetection
@@ -729,10 +788,24 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: mainMenuUI
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: levelSelectUI
   platform: 5
   scenePathNames:
-  - Assets/Scenes/Starting Scene.unity
+  - Assets/Scenes/StartingScene.unity
   - Assets/Scenes/Level 1.unity
   - Assets/Scenes/GameWinScene.unity
   - Assets/Scenes/GameLoseScene.unity
-  playerPath: C:/Users/Lewis/Documents/Raccoon Game Upload/Raccoon Game.exe
+  - Assets/Scenes/LevelSelect.unity
+  playerPath: C:/Users/Lewis/Documents/GitHub/AINT254-Raccoon-Game/Test Build/Raccoon
+    Game.exe

@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Starting Scene.unity
+    path: Assets/Scenes/StartingScene.unity
     guid: 218e6b0587e797c40ad6111b9c05b436
   - enabled: 1
     path: Assets/Scenes/Level 1.unity
@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameLoseScene.unity
     guid: 5079f6226d38f5c4cbf8d99451f54ea3
+  - enabled: 1
+    path: Assets/Scenes/LevelSelect.unity
+    guid: dfcea2adefcea5a4099b755ed99055ee
   m_configObjects: {}
