@@ -22,35 +22,27 @@ public class SpawnObjects : MonoBehaviour
         if (randomInt < 20)
         {
             //Spawn a healthy object
-            Rigidbody rb;
-            GameObject spawnedBall = Instantiate(decayedSpawn, transform.position, transform.rotation);
-            rb = spawnedBall.GetComponent<Rigidbody>();
-            rb.AddRelativeForce(new Vector3(Random.Range(1, 25), Random.Range(1, 25), Random.Range(1, 25)));
+            GameObject spawnedBall = Instantiate(decayedSpawn, transform.position + new Vector3(10,10,10), transform.rotation) as GameObject;
+            spawnedBall.GetComponent<Rigidbody>().AddForce(Vector3.forward * Random.Range(1, 10));
         }
         else if (randomInt < 95)
         {
             //Spawn a decayed object
-            Rigidbody rb;
-            GameObject spawnedBall = Instantiate(healthySpawn, transform.position, transform.rotation);
-            rb = spawnedBall.GetComponent<Rigidbody>();
-            rb.AddRelativeForce(new Vector3(Random.Range(1, 25), Random.Range(1, 25), Random.Range(1, 25)));
+            GameObject spawnedBall = Instantiate(healthySpawn, transform.position, transform.rotation) as GameObject;
+            spawnedBall.GetComponent<Rigidbody>().AddForce(Vector3.forward * Random.Range(1, 10));
         }
         else //Roll of 96-100, powerup table is instead triggered
         {
             int powerupint = Random.Range(1, 100); //Select a second integer between 1 and 100 so it can be easily split. For future development, this can be changed to the number of powerups.
             if (powerupint < 50)
             {
-                Rigidbody rb;
-                GameObject spawnedBall = Instantiate(doublePoints, transform.position, transform.rotation);
-                rb = spawnedBall.GetComponent<Rigidbody>();
-                rb.AddRelativeForce(new Vector3(Random.Range(1, 25), Random.Range(1, 25), Random.Range(1, 25)));
+                GameObject spawnedBall = Instantiate(doublePoints, transform.position, transform.rotation) as GameObject;
+                spawnedBall.GetComponent<Rigidbody>().AddForce(Vector3.forward * Random.Range(1, 10));
             }
             else
             {
-                Rigidbody rb;
-                GameObject spawnedBall = Instantiate(doubleSpeed, transform.position, transform.rotation);
-                rb = spawnedBall.GetComponent<Rigidbody>();
-                rb.AddRelativeForce(new Vector3(Random.Range(1, 25), Random.Range(1, 25), Random.Range(1, 25)));
+                GameObject spawnedBall = Instantiate(doubleSpeed, transform.position, transform.rotation) as GameObject;
+                spawnedBall.GetComponent<Rigidbody>().AddForce(Vector3.forward * Random.Range(1, 10));
             }
         }
     }

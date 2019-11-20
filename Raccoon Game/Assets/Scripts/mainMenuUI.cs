@@ -22,7 +22,7 @@ public class mainMenuUI : MonoBehaviour
     }
     public void bestTimesScreen()
     {
-        //SceneManager navigate to best times table here
+        SceneManager.LoadScene("BestTimes");
     }
     public void levelSelectNav()
     {

@@ -11,6 +11,8 @@ public class TimerEvent : MonoBehaviour
     public UnityEvent onTimerComplete;
     private void Start()
     {
+        time = Random.Range(5f, 15f);
+        Debug.Log("Time to spawn: " + time);
         if (repeat)
         {
             InvokeRepeating("OnTimerComplete", 0, time);

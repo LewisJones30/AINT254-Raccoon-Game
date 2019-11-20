@@ -12,6 +12,7 @@ public class CollisionDetection : MonoBehaviour
     public MovementScript movement;
     public Text doublePointsText, doubleSpeedText;
     public ScoringAndHealth scoringScript;
+    public bool doubleSpeedActive = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,15 +67,24 @@ public class CollisionDetection : MonoBehaviour
         }
         IEnumerator doubleSpeedPowerup() //Double speed script
         {
-            
-            float doublespeed = movement.movementSpeed * 2;
-            movement.movementSpeed = doublespeed;
-            doubleSpeedText.text = "Double speed active!";
-            doubleSpeedText.enabled = true;
-            doubleSpeedText.color = Color.cyan;
-            yield return new WaitForSeconds(10); //10 second activation time for double speed. Manually adjusted here.
-            movement.movementSpeed = doublespeed / 2;
-            doublePointsText.enabled = false;
+            if (doubleSpeedActive == true)
+            {
+                yield break;
+            }
+            else
+            {
+                doubleSpeedActive = true;
+                float doublespeed = movement.movementSpeed * 2;
+                movement.movementSpeed = doublespeed;
+                doubleSpeedText.text = "Double speed active!";
+                doubleSpeedText.enabled = true;
+                doubleSpeedText.color = Color.cyan;
+                yield return new WaitForSeconds(10); //10 second activation time for double speed. Manually adjusted here.
+                movement.movementSpeed = doublespeed / 2;
+                doubleSpeedText.enabled = false;
+                doubleSpeedActive = false;
+            }
+
         }
 
 
