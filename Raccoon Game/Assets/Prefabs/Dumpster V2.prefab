@@ -578,7 +578,8 @@ MonoBehaviour:
     type: 3}
   decayedSpawn: {fileID: 3459353735901196210, guid: e84283c0c0b25754191a1772d6edb6cf,
     type: 3}
-  doublePoints: {fileID: 0}
+  doublePoints: {fileID: 3459353735901196210, guid: 47adae5e972703a44b09f3670a272a5c,
+    type: 3}
   doubleSpeed: {fileID: 3459353735901196210, guid: 57ea250587b7f1141a5317dfc596c135,
     type: 3}
 --- !u!114 &765291718923926772

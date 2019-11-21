@@ -37,7 +37,7 @@ public class SceneNav : MonoBehaviour
     }
     public void MainMenu()
     {
-        SceneManager.LoadScene("Starting Scene");
+        SceneManager.LoadScene("StartingScene");
     }
     public void LoseGame()
     {
