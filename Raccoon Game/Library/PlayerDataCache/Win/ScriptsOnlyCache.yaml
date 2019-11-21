@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CollisionDetection
+    - DecayFood
     - GetBestTime
     - MovementScript
     - SceneNav
@@ -238,7 +239,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10584}
     - Class: 114
-      Script: {instanceID: 10962}
+      Script: {instanceID: 10926}
     - Class: 114
       Script: {instanceID: 11040}
     - Class: 114
@@ -886,5 +887,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/GameLoseScene.unity
   - Assets/Scenes/LevelSelect.unity
   - Assets/Scenes/BestTimes.unity
-  playerPath: C:/Users/ljones30/Documents/GitHub/AINT254-Raccoon-Game/Test Build/Raccoon
+  playerPath: C:/Users/ljones30/Documents/GitHub/AINT254-Raccoon-Game/Release 2 Build/Raccoon
     Game.exe

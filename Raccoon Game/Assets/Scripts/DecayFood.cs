@@ -12,8 +12,8 @@ public class DecayFood : MonoBehaviour
 
     private void Start()
     {
-        time = Random.Range(1f, 10f);
-        Debug.Log("Time to decay:");
+        time = Random.Range(5f, 10f);
+        Debug.Log("Time to decay:" + time);
         if (repeat == true)
         {
             InvokeRepeating("TransformEvent", 0, time); //Repeats until time reaches time specified

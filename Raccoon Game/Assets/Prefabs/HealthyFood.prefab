@@ -198,6 +198,7 @@ GameObject:
   - component: {fileID: 6004171690997320957}
   - component: {fileID: 6004171690997320959}
   - component: {fileID: 6004171690997320958}
+  - component: {fileID: 1685115025531785685}
   m_Layer: 0
   m_Name: HealthyFood
   m_TagString: Untagged
@@ -292,6 +293,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 0}
+--- !u!114 &1685115025531785685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6004171690997320956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e17f5b23f36454983b0367332f6d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 10
+  repeat: 0
+  decayedFood: {fileID: 3459353735901196210, guid: e84283c0c0b25754191a1772d6edb6cf,
+    type: 3}
 --- !u!1 &7014546215902328272
 GameObject:
   m_ObjectHideFlags: 0

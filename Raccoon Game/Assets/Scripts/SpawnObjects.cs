@@ -22,14 +22,14 @@ public class SpawnObjects : MonoBehaviour
         if (randomInt < 20)
         {
             //Spawn a healthy object
-            GameObject spawnedBall = Instantiate(decayedSpawn, transform.position + new Vector3(10,10,10), transform.rotation) as GameObject;
-            spawnedBall.GetComponent<Rigidbody>().AddForce(Vector3.forward * Random.Range(1, 10));
+            GameObject spawnedBall = Instantiate(decayedSpawn, transform.position, transform.rotation) as GameObject;
+            spawnedBall.GetComponent<Rigidbody>().AddForce(Vector3.up * Random.Range(1, 20));
         }
         else if (randomInt < 95)
         {
             //Spawn a decayed object
             GameObject spawnedBall = Instantiate(healthySpawn, transform.position, transform.rotation) as GameObject;
-            spawnedBall.GetComponent<Rigidbody>().AddForce(Vector3.forward * Random.Range(1, 10));
+            spawnedBall.GetComponent<Rigidbody>().AddForce(Vector3.up * Random.Range(1, 20));
         }
         else //Roll of 96-100, powerup table is instead triggered
         {
@@ -37,12 +37,12 @@ public class SpawnObjects : MonoBehaviour
             if (powerupint < 50)
             {
                 GameObject spawnedBall = Instantiate(doublePoints, transform.position, transform.rotation) as GameObject;
-                spawnedBall.GetComponent<Rigidbody>().AddForce(Vector3.forward * Random.Range(1, 10));
+                spawnedBall.GetComponent<Rigidbody>().AddForce(Vector3.up * Random.Range(1, 20));
             }
             else
             {
                 GameObject spawnedBall = Instantiate(doubleSpeed, transform.position, transform.rotation) as GameObject;
-                spawnedBall.GetComponent<Rigidbody>().AddForce(Vector3.forward * Random.Range(1, 10));
+                spawnedBall.GetComponent<Rigidbody>().AddForce(Vector3.up * Random.Range(1, 20));
             }
         }
     }
