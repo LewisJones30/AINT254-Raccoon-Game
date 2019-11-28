@@ -14,15 +14,15 @@ public class ScoringAndHealth : MonoBehaviour
     public UnityEvent onZeroHealth, onGameCompletion;
     public bool doublePoints = false; //This will be changed through the double points routine in collision detection.
     // Start is called before the first frame update
-    public void AddPoint()
+    public void AddPointScript()
     {
         if (doublePoints == true)
         {
-            score = score + 2;
+           score = addTwoPoints(score);
         }
         else
         {
-            score = score + 1;
+            score = addPoint(score);
         }
         if (score > scoreToWin - 1)
         {
@@ -50,4 +50,16 @@ public class ScoringAndHealth : MonoBehaviour
         }
         //Update UI score here
     }
+    int addPoint(int score)
+    {
+        score = score + 1;
+        Debug.Log(score);
+        return score;
+    }
+    int addTwoPoints(int score)
+    {
+        score = score + 2;
+        return score;
+    }
+
 }

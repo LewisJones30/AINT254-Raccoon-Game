@@ -21,29 +21,30 @@ public class SpawnObjects : MonoBehaviour
          */
         if (randomInt < 20)
         {
-            //Spawn a healthy object
-            GameObject spawnedBall = Instantiate(decayedSpawn, transform.position, transform.rotation) as GameObject;
-            spawnedBall.GetComponent<Rigidbody>().AddForce(Vector3.up * Random.Range(1, 20));
+            //Spawn a decayed object
+            spawnObject(decayedSpawn);
         }
         else if (randomInt < 95)
         {
-            //Spawn a decayed object
-            GameObject spawnedBall = Instantiate(healthySpawn, transform.position, transform.rotation) as GameObject;
-            spawnedBall.GetComponent<Rigidbody>().AddForce(Vector3.up * Random.Range(1, 20));
+            //Spawn a healthy object
+            spawnObject(healthySpawn);
         }
         else //Roll of 96-100, powerup table is instead triggered
         {
             int powerupint = Random.Range(1, 100); //Select a second integer between 1 and 100 so it can be easily split. For future development, this can be changed to the number of powerups.
             if (powerupint < 50)
             {
-                GameObject spawnedBall = Instantiate(doublePoints, transform.position, transform.rotation) as GameObject;
-                spawnedBall.GetComponent<Rigidbody>().AddForce(Vector3.up * Random.Range(1, 20));
+                spawnObject(doublePoints);
             }
             else
             {
-                GameObject spawnedBall = Instantiate(doubleSpeed, transform.position, transform.rotation) as GameObject;
-                spawnedBall.GetComponent<Rigidbody>().AddForce(Vector3.up * Random.Range(1, 20));
+                spawnObject(doubleSpeed);
             }
         }
+    }
+    void spawnObject(GameObject objectToSpawn)
+    {
+        GameObject spawnedObject = Instantiate(objectToSpawn, transform.position, transform.rotation) as GameObject;
+        spawnedObject.GetComponent<Rigidbody>().AddForce(Vector3.up * Random.Range(1, 20));
     }
 }

@@ -13,13 +13,11 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeLeftText.color = Color.green;
     }
 
     // Update is called once per frame
     void Update()
-    {
-
+    { 
         timeLeft -= Time.deltaTime; //This is used as the time remaining counter.
         timeTaken += Time.deltaTime; //This is used to tell the player the best time.
         int minutes = Mathf.FloorToInt(timeLeft / 60f);
