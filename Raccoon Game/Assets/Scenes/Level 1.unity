@@ -5675,8 +5675,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   scoreToWin: 15
-  maxHealth: 3
-  health: 3
+  maxHealth: 5
+  health: 5
   scoreText: {fileID: 802273127022967915}
   healthText: {fileID: 802273128693069250}
   onZeroHealth:

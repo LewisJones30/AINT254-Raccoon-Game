@@ -44,7 +44,7 @@ public class ScoringAndHealth : MonoBehaviour
     {
         health = health - 1;
         healthText.text = "Health: " + health + "/" + maxHealth;
-        if (maxHealth < 1)
+        if (health < 1)
         {
             onZeroHealth.Invoke();
         }
