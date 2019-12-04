@@ -6,14 +6,20 @@ public class SpawnObjects : MonoBehaviour
 {
 
     public GameObject healthySpawn, decayedSpawn, doublePoints, doubleSpeed;
+    public bool powerup = false;
 
 
     public void Spawn()
     {
+        if (powerup == true)
+        {
+            spawnObject(healthySpawn);
+            return;
+        }
         int randomInt = 0;
         randomInt = Random.Range(1, 100); //20% chance that the object spawned will already be decayed, damaging the player
         /*
-         * Breakdown of random ints:
+         * Breakdown of spawning table:
          * 1 - 20 = decayed spawn (20% chance)
          * 21 - 95 = Healthy spawn (75% chance)
          * 96 - 100 = Powerup spawn (5% chance, then split evenly for each powerup).

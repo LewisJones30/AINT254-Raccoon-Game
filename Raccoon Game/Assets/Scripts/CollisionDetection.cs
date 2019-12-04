@@ -10,9 +10,13 @@ public class CollisionDetection : MonoBehaviour
     public UnityEvent onCollisionDecayed;
     public GameObject player;
     public MovementScript movement;
-    public Text doublePointsText, doubleSpeedText;
+    public Text doublePointsText, doubleSpeedText, invulnerabilityText, spawnerText;
     public ScoringAndHealth scoringScript;
     public bool doubleSpeedActive = false;
+    public bool invulnerability = false;
+    public Animator glowingAnim;
+    [SerializeField]
+    private SpawnObjects spawnerScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +24,8 @@ public class CollisionDetection : MonoBehaviour
         scoringScript = player.GetComponent<ScoringAndHealth>();
         doublePointsText.enabled = false; //Disable text until called
         doubleSpeedText.enabled = false;
+        invulnerabilityText.enabled = false;
+        glowingAnim.enabled = false;
     }
 
     // Update is called once per frame
@@ -55,7 +61,19 @@ public class CollisionDetection : MonoBehaviour
             Debug.Log("Double Points activated.");
             StartCoroutine(doublePoints());
         }
-        IEnumerator doublePoints() //Double points script
+        else if (other.gameObject.name == "invulnerability" || other.gameObject.name == "invulnerability(Clone)")
+        {
+            Destroy(other.gameObject);
+            Debug.Log("Invulnerability period has been activated.");
+            StartCoroutine(immunity());
+        }
+        else if (other.gameObject.name == "guaranteedSpawns" || other.gameObject.name == "guaranteedSpawns(Clone)")
+        {
+            Destroy(other.gameObject);
+            Debug.Log("Guaranteed spawns active");
+            StartCoroutine(guaranteedSpawns());
+        }
+            IEnumerator doublePoints() //Double points script
         {
             scoringScript.doublePoints = true;
             doublePointsText.text = "Double points active!";
@@ -69,7 +87,7 @@ public class CollisionDetection : MonoBehaviour
         {
             if (doubleSpeedActive == true)
             {
-                yield break;
+                yield break; //prevents the speed being run more than once, as this creates an uncontrollable playeroh y
             }
             else
             {
@@ -85,6 +103,28 @@ public class CollisionDetection : MonoBehaviour
                 doubleSpeedActive = false;
             }
 
+        }
+        IEnumerator immunity()
+        {
+            scoringScript.invulnerability = true;
+            invulnerabilityText.text = "You are currently immune to damage!";
+            invulnerabilityText.enabled = true;
+            invulnerabilityText.color = Color.yellow;
+            glowingAnim.enabled = true;
+            yield return new WaitForSeconds(10);
+            invulnerabilityText.enabled = false;
+            scoringScript.invulnerability = false;
+            glowingAnim.enabled = false;
+
+        }
+        IEnumerator guaranteedSpawns()
+        {
+            spawnerScript.powerup = true;
+            spawnerText.text = "For 5 seconds, all spawns are guaranteed to be healthy";
+            spawnerText.enabled = true;
+            yield return new WaitForSeconds(5);
+            spawnerText.enabled = false;
+            spawnerScript.powerup = false;
         }
 
 

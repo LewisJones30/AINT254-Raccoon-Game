@@ -13,6 +13,7 @@ public class ScoringAndHealth : MonoBehaviour
     public Text scoreText, healthText;
     public UnityEvent onZeroHealth, onGameCompletion;
     public bool doublePoints = false; //This will be changed through the double points routine in collision detection.
+    public bool invulnerability = false; //True/false situation for the invulnerability powerup.
     // Start is called before the first frame update
     public void AddPointScript()
     {
@@ -42,7 +43,10 @@ public class ScoringAndHealth : MonoBehaviour
     }
     public void DamagePlayer()
     {
-        health = health - 1;
+        if (invulnerability == false)
+        {
+            health = health - 1;
+        }
         healthText.text = "Health: " + health + "/" + maxHealth;
         if (health < 1)
         {
