@@ -128,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 046ec788ec410634f862a87656147bed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerScript: {fileID: 0}
 --- !u!114 &4067216049919302980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  scoreToWin: 0
+  maxHealth: 3
   health: 3
   scoreText: {fileID: 0}
   healthText: {fileID: 0}
@@ -176,6 +179,8 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  doublePoints: 0
+  invulnerability: 0
 --- !u!114 &4067216049919302977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,6 +225,17 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  player: {fileID: 0}
+  movement: {fileID: 0}
+  doublePointsText: {fileID: 0}
+  doubleSpeedText: {fileID: 0}
+  invulnerabilityText: {fileID: 0}
+  spawnerText: {fileID: 0}
+  scoringScript: {fileID: 0}
+  doubleSpeedActive: 0
+  invulnerability: 0
+  glowingAnim: {fileID: 0}
+  spawnerScript: {fileID: 0}
 --- !u!114 &4067216049919302976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,6 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLeft: 75
   timeLeftText: {fileID: 0}
+  timeTaken: 0
 --- !u!114 &4067216049919303005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,14 +391,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5426919346848824916}
-  m_LocalRotation: {x: -0, y: 0.6986855, z: -0, w: -0.715429}
-  m_LocalPosition: {x: -13.44, y: -0.07, z: 9.7}
+  m_LocalRotation: {x: -0, y: 0.95616585, z: -0, w: 0.29282585}
+  m_LocalPosition: {x: -13.03, y: -0.07, z: 9.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1541863241344016255}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 271.357, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 145.94601, z: 0}
 --- !u!54 &4067216050222940319
 Rigidbody:
   m_ObjectHideFlags: 0
