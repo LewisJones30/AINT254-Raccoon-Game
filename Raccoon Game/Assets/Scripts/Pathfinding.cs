@@ -17,9 +17,12 @@ public class Pathfinding : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
         if (!nav.pathPending && nav.remainingDistance < 1f)
         {
+            //transform.LookAt(navigationPoints[destinationPoint].position);
             MovePoint();
+
         }
     }
     void MovePoint()
@@ -30,5 +33,6 @@ public class Pathfinding : MonoBehaviour
         }
         nav.destination = navigationPoints[destinationPoint].position;
         destinationPoint = (destinationPoint + 1) % navigationPoints.Length;
+ 
     }
 }
