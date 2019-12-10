@@ -28,10 +28,9 @@ public class RaycastChecker : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 forward = transform.TransformDirection(Vector3.back);
-        //Debug.DrawRay(transform.position, forward * raycastLength, Color.red, 100);
-        if (Physics.Raycast(transform.position, forward, out hit, raycastLength))
+        if (Physics.SphereCast(transform.position, 5, forward * raycastLength, out hit))
         {
-            Debug.Log(hit.collider.gameObject.name);
+            //Debug.Log(hit.collider.gameObject.name);
             if (hit.collider.gameObject.name == "Model")
             {
                 warningText.enabled = true;

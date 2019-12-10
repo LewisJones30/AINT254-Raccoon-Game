@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnObjects : MonoBehaviour
 {
 
-    public GameObject healthySpawn, decayedSpawn, doublePoints, doubleSpeed;
+    public GameObject healthySpawn, decayedSpawn, doublePoints, doubleSpeed, invulnerability, guaranteedspawn;
     public bool powerup = false;
 
 
@@ -38,14 +38,31 @@ public class SpawnObjects : MonoBehaviour
         else //Roll of 96-100, powerup table is instead triggered
         {
             int powerupint = Random.Range(1, 100); //Select a second integer between 1 and 100 so it can be easily split. For future development, this can be changed to the number of powerups.
-            if (powerupint < 50)
+            /*
+             * Breakdown of current spawning table:
+             * 25% chance of all of the following powerups:
+             * Double Points
+             * Double Speed
+             * Guaranteed Healthy Spawns
+             * A period of invulnerability
+             */
+            if (powerupint < 25) //Currently four powerups
             {
                 spawnObject(doublePoints);
             }
-            else
+            else if (powerupint < 50)
             {
                 spawnObject(doubleSpeed);
             }
+            else if (powerupint < 75)
+            {
+                spawnObject(invulnerability);
+            }
+            else
+            {
+                spawnObject(guaranteedspawn);
+            }
+
         }
     }
     void spawnObject(GameObject objectToSpawn)

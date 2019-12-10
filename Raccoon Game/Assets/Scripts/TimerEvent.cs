@@ -11,7 +11,7 @@ public class TimerEvent : MonoBehaviour
     public UnityEvent onTimerComplete;
     private void Start()
     {
-        time = Random.Range(5f, 15f);
+        time = Random.Range(10f, 20f);
         Debug.Log("Time to spawn: " + time);
         if (repeat)
         {

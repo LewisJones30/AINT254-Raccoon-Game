@@ -79,7 +79,7 @@ public class CollisionDetection : MonoBehaviour
             doublePointsText.text = "Double points active!";
             doublePointsText.enabled = true;
             doublePointsText.color = Color.green;
-            yield return new WaitForSeconds(10); //Stay active for 10 seconds. Manually adjusted here.
+            yield return new WaitForSeconds(20); //Stay active for 20 seconds. Manually adjusted here.
             scoringScript.doublePoints = false;
             doublePointsText.enabled = false;
         }
@@ -97,7 +97,7 @@ public class CollisionDetection : MonoBehaviour
                 doubleSpeedText.text = "Double speed active!";
                 doubleSpeedText.enabled = true;
                 doubleSpeedText.color = Color.cyan;
-                yield return new WaitForSeconds(10); //10 second activation time for double speed. Manually adjusted here.
+                yield return new WaitForSeconds(20); //20 second activation time for double speed. Manually adjusted here.
                 movement.movementSpeed = doublespeed / 2;
                 doubleSpeedText.enabled = false;
                 doubleSpeedActive = false;
@@ -111,7 +111,7 @@ public class CollisionDetection : MonoBehaviour
             invulnerabilityText.enabled = true;
             invulnerabilityText.color = Color.yellow;
             glowingAnim.enabled = true;
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(20);
             invulnerabilityText.enabled = false;
             scoringScript.invulnerability = false;
             glowingAnim.enabled = false;
@@ -120,9 +120,9 @@ public class CollisionDetection : MonoBehaviour
         IEnumerator guaranteedSpawns()
         {
             spawnerScript.powerup = true;
-            spawnerText.text = "For 5 seconds, all spawns are guaranteed to be healthy";
+            spawnerText.text = "For 10 seconds, all spawns are guaranteed to be healthy";
             spawnerText.enabled = true;
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(10);
             spawnerText.enabled = false;
             spawnerScript.powerup = false;
         }

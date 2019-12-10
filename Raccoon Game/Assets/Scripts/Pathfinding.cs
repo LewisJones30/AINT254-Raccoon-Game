@@ -17,7 +17,6 @@ public class Pathfinding : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
         if (!nav.pathPending && nav.remainingDistance < 1f)
         {
             //transform.LookAt(navigationPoints[destinationPoint].position);
