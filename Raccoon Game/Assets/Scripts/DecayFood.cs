@@ -12,7 +12,7 @@ public class DecayFood : MonoBehaviour
 
     private void Start()
     {
-        time = Random.Range(10f, 20f);
+        time = Random.Range(20f, 30f);
         Debug.Log("Time to decay:" + time);
         if (repeat == true)
         {

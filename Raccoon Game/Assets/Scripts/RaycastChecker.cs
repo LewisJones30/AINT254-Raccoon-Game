@@ -28,7 +28,7 @@ public class RaycastChecker : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 forward = transform.TransformDirection(Vector3.back);
-        if (Physics.SphereCast(transform.position, 5, forward * raycastLength, out hit))
+        if (Physics.SphereCast(transform.position, 8, forward * raycastLength, out hit))
         {
             //Debug.Log(hit.collider.gameObject.name);
             if (hit.collider.gameObject.name == "Model")
