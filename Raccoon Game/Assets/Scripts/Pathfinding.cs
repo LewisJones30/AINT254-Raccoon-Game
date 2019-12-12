@@ -19,8 +19,15 @@ public class Pathfinding : MonoBehaviour
     {
         if (!nav.pathPending && nav.remainingDistance < 1f)
         {
-            //transform.LookAt(navigationPoints[destinationPoint].position);
+            var targetPosition = nav.pathEndPosition;
+            var targetPoint = new Vector3(targetPosition.x, targetPosition.y, targetPosition.z);
+            var direction = (targetPoint - transform.position).normalized;
+            var lookRotation = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, lookRotation, 360);
             MovePoint();
+        }
+        else
+        {
 
         }
     }

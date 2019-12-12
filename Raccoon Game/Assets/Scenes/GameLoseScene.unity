@@ -685,9 +685,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Sorry, you have run out of health
+  m_Text: 'You have been defeated.
 
-    and have lost.'
+    You starved to death.
+
+    Try again.
+
+'
 --- !u!222 &2042051558
 CanvasRenderer:
   m_ObjectHideFlags: 0

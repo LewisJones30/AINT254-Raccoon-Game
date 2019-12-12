@@ -3,10 +3,14 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CollisionDetection
     - DecayFood
+    - DestroyScript
     - GetBestTime
     - MovementScript
+    - Pathfinding
+    - RaycastChecker
     - SceneNav
     - ScoringAndHealth
+    - SoundPersist
     - SpawnObjects
     - Timer
     - TimerEvent
@@ -59,15 +63,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9886}
     - Class: 114
-      Script: {instanceID: 10256}
+      Script: {instanceID: 10258}
     - Class: 114
-      Script: {instanceID: 10598}
+      Script: {instanceID: 10600}
     - Class: 114
-      Script: {instanceID: 11040}
+      Script: {instanceID: 11042}
     - Class: 114
-      Script: {instanceID: 11330}
+      Script: {instanceID: 11336}
     - Class: 114
-      Script: {instanceID: 11390}
+      Script: {instanceID: 11396}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -108,15 +112,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9886}
     - Class: 114
-      Script: {instanceID: 10256}
+      Script: {instanceID: 10258}
     - Class: 114
-      Script: {instanceID: 10584}
+      Script: {instanceID: 10586}
     - Class: 114
-      Script: {instanceID: 10598}
+      Script: {instanceID: 10600}
     - Class: 114
-      Script: {instanceID: 11040}
+      Script: {instanceID: 11042}
     - Class: 114
-      Script: {instanceID: 11390}
+      Script: {instanceID: 11396}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -163,17 +167,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9886}
     - Class: 114
-      Script: {instanceID: 10256}
+      Script: {instanceID: 10258}
     - Class: 114
-      Script: {instanceID: 10584}
+      Script: {instanceID: 10586}
     - Class: 114
-      Script: {instanceID: 10598}
+      Script: {instanceID: 10600}
     - Class: 114
-      Script: {instanceID: 10962}
+      Script: {instanceID: 10964}
     - Class: 114
-      Script: {instanceID: 11040}
+      Script: {instanceID: 11042}
     - Class: 114
-      Script: {instanceID: 11390}
+      Script: {instanceID: 11396}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -219,6 +223,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -232,32 +240,44 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9916}
     - Class: 114
-      Script: {instanceID: 10122}
+      Script: {instanceID: 9964}
     - Class: 114
-      Script: {instanceID: 10256}
+      Script: {instanceID: 10124}
     - Class: 114
-      Script: {instanceID: 10376}
+      Script: {instanceID: 10258}
     - Class: 114
-      Script: {instanceID: 10584}
+      Script: {instanceID: 10378}
     - Class: 114
-      Script: {instanceID: 10926}
+      Script: {instanceID: 10524}
     - Class: 114
-      Script: {instanceID: 11040}
+      Script: {instanceID: 10586}
     - Class: 114
-      Script: {instanceID: 11062}
+      Script: {instanceID: 10928}
     - Class: 114
-      Script: {instanceID: 11204}
+      Script: {instanceID: 11042}
     - Class: 114
-      Script: {instanceID: 11314}
+      Script: {instanceID: 11064}
     - Class: 114
-      Script: {instanceID: 11390}
+      Script: {instanceID: 11206}
+    - Class: 114
+      Script: {instanceID: 11266}
+    - Class: 114
+      Script: {instanceID: 11318}
+    - Class: 114
+      Script: {instanceID: 11330}
+    - Class: 114
+      Script: {instanceID: 11396}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
-    - Class: 136
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 195
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
     - Class: 198
       Script: {instanceID: 0}
@@ -268,6 +288,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 238
       Script: {instanceID: 0}
     - Class: 258
       Script: {instanceID: 0}
@@ -305,13 +327,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9886}
     - Class: 114
-      Script: {instanceID: 10256}
+      Script: {instanceID: 10258}
     - Class: 114
-      Script: {instanceID: 10598}
+      Script: {instanceID: 10600}
     - Class: 114
-      Script: {instanceID: 11040}
+      Script: {instanceID: 11042}
     - Class: 114
-      Script: {instanceID: 11390}
+      Script: {instanceID: 11396}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -341,6 +363,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -352,15 +378,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9886}
     - Class: 114
-      Script: {instanceID: 10256}
+      Script: {instanceID: 10258}
     - Class: 114
-      Script: {instanceID: 10598}
+      Script: {instanceID: 10600}
     - Class: 114
-      Script: {instanceID: 11040}
+      Script: {instanceID: 11042}
     - Class: 114
-      Script: {instanceID: 11084}
+      Script: {instanceID: 11086}
     - Class: 114
-      Script: {instanceID: 11390}
+      Script: {instanceID: 11330}
+    - Class: 114
+      Script: {instanceID: 11396}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -486,6 +514,12 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 68991059894f8ea7841177c7797e6c14
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Pathfinding
+  - hash:
+      serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -534,7 +568,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 602552e53e730f0a6bd1a833088fe1b7
+      Hash: c9a3fb5a4b98a22190e3608ecc40e42f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SpawnObjects
@@ -774,10 +808,16 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 2bd76b6d31cd545e96efc13384e22b91
+      Hash: 6791253e26690ec5197cde2bc1df2ecb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ScoringAndHealth
+  - hash:
+      serializedVersion: 2
+      Hash: 72dbe56d2e78bd2f120f534a5989038b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RaycastChecker
   - hash:
       serializedVersion: 2
       Hash: 5372ed2ce39229b1ac910757999a8be2
@@ -792,7 +832,7 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
-      Hash: ab6c0abf0aebc90c7aa5f162144af574
+      Hash: ccc287a4ba6dc7ec4bf7609c692eb72d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CollisionDetection
@@ -802,6 +842,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayModeRunnerCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundPersist
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -888,5 +934,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/GameLoseScene.unity
   - Assets/Scenes/LevelSelect.unity
   - Assets/Scenes/BestTimes.unity
-  playerPath: C:/Users/ljones30/Documents/GitHub/AINT254-Raccoon-Game/Release 2 Build/Raccoon
-    Game.exe
+  playerPath: C:/Users/ljones30/Documents/GitHub/AINT254-Raccoon-Game/Release 3 Build
+    - Final Demo/Raccoon Game.exe

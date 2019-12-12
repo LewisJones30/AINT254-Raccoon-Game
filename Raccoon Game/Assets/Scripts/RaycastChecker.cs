@@ -15,6 +15,7 @@ public class RaycastChecker : MonoBehaviour
     private Text warningText;
     public float defaultTimeToBeHit;
     private float time = 0f;
+    private GameObject other;
 
     private bool hitInLast10Seconds = false;
     void Start()
@@ -30,6 +31,10 @@ public class RaycastChecker : MonoBehaviour
         Vector3 forward = transform.TransformDirection(Vector3.back);
         if (Physics.SphereCast(transform.position, 8, forward * raycastLength, out hit))
         {
+            if (hit.collider.gameObject != null)
+            {
+                GameObject other = hit.collider.gameObject;
+            }
             //Debug.Log(hit.collider.gameObject.name);
             if (hit.collider.gameObject.name == "Model")
             {
@@ -46,6 +51,11 @@ public class RaycastChecker : MonoBehaviour
                     hitInLast10Seconds = true;
                 }
 
+            }
+            else if (hit.collider.gameObject.name == "HealthyFood")
+            {
+                Destroy(other);
+                Debug.Log("Food destroyed!");
             }
             else
             {
