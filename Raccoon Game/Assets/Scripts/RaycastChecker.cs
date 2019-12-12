@@ -31,10 +31,6 @@ public class RaycastChecker : MonoBehaviour
         Vector3 forward = transform.TransformDirection(Vector3.back);
         if (Physics.SphereCast(transform.position, 8, forward * raycastLength, out hit))
         {
-            if (hit.collider.gameObject != null)
-            {
-                GameObject other = hit.collider.gameObject;
-            }
             //Debug.Log(hit.collider.gameObject.name);
             if (hit.collider.gameObject.name == "Model")
             {

@@ -467,7 +467,11 @@ MonoBehaviour:
 
     The colour of the powerups determines what powerup
 
-    you will recieve!'
+    you will recieve!
+
+    Controls:
+
+    Arrow keys to move the player'
 --- !u!222 &908727206
 CanvasRenderer:
   m_ObjectHideFlags: 0

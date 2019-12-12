@@ -28,4 +28,8 @@ public class mainMenuUI : MonoBehaviour
     {
         SceneManager.LoadScene("LevelSelect");
     }
+    public void instructions()
+    {
+        SceneManager.LoadScene("InstructionsScene");
+    }
 }

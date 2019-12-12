@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BestTimes.unity
     guid: 8a363def6066a55469461090779833ba
+  - enabled: 1
+    path: Assets/Scenes/InstructionsScene.unity
+    guid: fcf8c1bd05cab8148ae56099e80484bc
   m_configObjects: {}
