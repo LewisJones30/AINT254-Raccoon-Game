@@ -44,7 +44,7 @@ public class SceneNav : MonoBehaviour
             PlayerPrefs.SetFloat("BestTime", PlayerPrefs.GetFloat("PlayerTime")); //Set the best time as the player time
             PlayerPrefs.SetInt("NewBest", 1); //Boolean to say if new high score, to inform user of this.
         }
-        SceneManager.LoadScene("GameWinScene");
+        SceneManager.LoadScene("lvl1Complete");
     }
     public void level2Complete()
     {
@@ -60,6 +60,7 @@ public class SceneNav : MonoBehaviour
             PlayerPrefs.SetFloat("BestTimelvl2", PlayerPrefs.GetFloat("PlayerTimelvl2")); //Set the best time as the player time
             PlayerPrefs.SetInt("NewBestlvl2", 1); //Boolean to say if new high score, to inform user of this.
         }
+        PlayerPrefs.SetInt("lvl2Complete", 1); //Level completion recorded.
         SceneManager.LoadScene("lvl2Complete");
 
     }
@@ -77,6 +78,7 @@ public class SceneNav : MonoBehaviour
             PlayerPrefs.SetFloat("BestTimelvl3", PlayerPrefs.GetFloat("PlayerTimelvl3")); //Set the best time as the player time
             PlayerPrefs.SetInt("NewBestlvl3", 1); //Boolean to say if new high score, to inform user of this.
         }
+        PlayerPrefs.SetInt("lvl3Complete", 1); //Level completion recorded.
         SceneManager.LoadScene("lvl3Complete");
     }
     public void MainMenu()
