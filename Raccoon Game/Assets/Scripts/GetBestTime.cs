@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GetBestTime : MonoBehaviour
 {
@@ -11,8 +12,23 @@ public class GetBestTime : MonoBehaviour
     void Start()
     {
         {
-            //Update bestTime text.
-            bestTimeFloat = PlayerPrefs.GetFloat("BestTime");
+            //Determine which floats to load.
+            if (SceneManager.GetActiveScene().name == "lvl1Complete")
+            {
+                bestTimeFloat = PlayerPrefs.GetFloat("BestTime");
+                playerTimeFloat = PlayerPrefs.GetFloat("PlayerTime");
+            }
+            else if (SceneManager.GetActiveScene().name == "lvl2Complete")
+            {
+                bestTimeFloat = PlayerPrefs.GetFloat("BestTimelvl2");
+                playerTimeFloat = PlayerPrefs.GetFloat("PlayerTimelvl2");
+            }
+            else if (SceneManager.GetActiveScene().name == "lvl3Complete")
+            {
+                bestTimeFloat = PlayerPrefs.GetFloat("BestTimelvl3");
+                playerTimeFloat = PlayerPrefs.GetFloat("PlayerTimelvl3");
+            }
+            
             int minutes = Mathf.FloorToInt(bestTimeFloat / 60f);
             int seconds = Mathf.FloorToInt(bestTimeFloat - minutes * 60);
             Debug.Log(minutes.ToString());
@@ -40,7 +56,6 @@ public class GetBestTime : MonoBehaviour
             {
                 //Remove high score text, calculate player's best time
                 newHighScore.gameObject.SetActive(false); //Disable the high score message if the player has not beaten the last highest time.
-                playerTimeFloat = PlayerPrefs.GetFloat("PlayerTime");
                 int playerminutes = Mathf.FloorToInt(playerTimeFloat / 60f);
                 int playerseconds = Mathf.FloorToInt(playerTimeFloat - minutes * 60);
                 playerTime.text = string.Format("Your time: {0:00}:{1:00}", playerminutes, playerseconds);

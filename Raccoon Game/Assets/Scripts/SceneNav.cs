@@ -22,7 +22,15 @@ public class SceneNav : MonoBehaviour
         //Load the first level
         SceneManager.LoadScene("Level 1");
     }
-    public void WinGame() //Runs when the player gets the objective completed.
+    public void level2()
+    {
+        SceneManager.LoadScene("Level 2");
+    }
+    public void level3()
+    {
+        SceneManager.LoadScene("Level 3");
+    }
+    public void level1Complete() //Runs when the player gets the objective completed.
     {
         PlayerPrefs.SetFloat("PlayerTime", timerScript.timeTaken); //Set player's time to be read in the new scene.
         if (PlayerPrefs.GetFloat("BestTime") > PlayerPrefs.GetFloat("PlayerTime"))
@@ -37,6 +45,39 @@ public class SceneNav : MonoBehaviour
             PlayerPrefs.SetInt("NewBest", 1); //Boolean to say if new high score, to inform user of this.
         }
         SceneManager.LoadScene("GameWinScene");
+    }
+    public void level2Complete()
+    {
+        PlayerPrefs.SetFloat("PlayerTimelvl2", timerScript.timeTaken); //Set player's time to be read in the new scene.
+        if (PlayerPrefs.GetFloat("BestTimelvl2") > PlayerPrefs.GetFloat("PlayerTimelvl2"))
+        {
+
+            PlayerPrefs.SetFloat("BestTimelvl2", PlayerPrefs.GetFloat("PlayerTimelvl2")); //Set the best time as the player time
+            PlayerPrefs.SetInt("NewBestlvl2", 1); //Boolean to say if new high score, to inform user of this.
+        }
+        else if (PlayerPrefs.GetFloat("BestTimelvl2") == 0) //if no time has been recorded
+        {
+            PlayerPrefs.SetFloat("BestTimelvl2", PlayerPrefs.GetFloat("PlayerTimelvl2")); //Set the best time as the player time
+            PlayerPrefs.SetInt("NewBestlvl2", 1); //Boolean to say if new high score, to inform user of this.
+        }
+        SceneManager.LoadScene("lvl2Complete");
+
+    }
+    public void level3Complete()
+    {
+        PlayerPrefs.SetFloat("PlayerTimelvl3", timerScript.timeTaken); //Set player's time to be read in the new scene.
+        if (PlayerPrefs.GetFloat("BestTimelvl3") > PlayerPrefs.GetFloat("PlayerTimelvl3"))
+        {
+
+            PlayerPrefs.SetFloat("BestTimelvl3", PlayerPrefs.GetFloat("PlayerTimelvl3")); //Set the best time as the player time
+            PlayerPrefs.SetInt("NewBestlvl3", 1); //Boolean to say if new high score, to inform user of this.
+        }
+        else if (PlayerPrefs.GetFloat("BestTimelvl3") == 0) //if no time has been recorded
+        {
+            PlayerPrefs.SetFloat("BestTimelvl3", PlayerPrefs.GetFloat("PlayerTimelvl3")); //Set the best time as the player time
+            PlayerPrefs.SetInt("NewBestlvl3", 1); //Boolean to say if new high score, to inform user of this.
+        }
+        SceneManager.LoadScene("lvl3Complete");
     }
     public void MainMenu()
     {

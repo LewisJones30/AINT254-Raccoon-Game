@@ -5764,7 +5764,7 @@ Transform:
   m_GameObject: {fileID: 3937823905870732870}
   m_LocalRotation: {x: -0, y: 0.020095771, z: -0, w: 0.99979806}
   m_LocalPosition: {x: -22.66, y: 0.63, z: 14.195562}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.99999994, y: 1, z: 0.99999994}
   m_Children:
   - {fileID: 3173329320129254459}
   - {fileID: 7435388729915079803}
@@ -7423,11 +7423,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2835459318712232149, guid: 9973e82bc39aeec4f9ed8033925e9cd7,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 4475043232918315426, guid: 9973e82bc39aeec4f9ed8033925e9cd7,
         type: 3}
       propertyPath: m_Name
@@ -7598,6 +7593,11 @@ PrefabInstance:
       propertyPath: warningText
       value: 
       objectReference: {fileID: 552207496}
+    - target: {fileID: 2835459318712232149, guid: 9973e82bc39aeec4f9ed8033925e9cd7,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3415282665946967399, guid: 9973e82bc39aeec4f9ed8033925e9cd7,
         type: 3}
       propertyPath: navigationPoints.Array.data[8]
@@ -9039,6 +9039,10 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 901409621, guid: db099937afcbea34ba520490bf18decf, type: 3}
+      propertyPath: onGameCompletion.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: level1Complete
+      objectReference: {fileID: 0}
     - target: {fileID: 901409623, guid: db099937afcbea34ba520490bf18decf, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -9069,7 +9073,11 @@ PrefabInstance:
       objectReference: {fileID: 1690236628}
     - target: {fileID: 901409622, guid: db099937afcbea34ba520490bf18decf, type: 3}
       propertyPath: m_Constraints
-      value: 36
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 901409622, guid: db099937afcbea34ba520490bf18decf, type: 3}
+      propertyPath: m_Drag
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db099937afcbea34ba520490bf18decf, type: 3}
