@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\DestroyScript.cs" />
     <Compile Include="Assets\Scripts\DestroyTimeEvent.cs" />
     <Compile Include="Assets\Scripts\GetBestTime.cs" />
+    <Compile Include="Assets\Scripts\ingameUI.cs" />
     <Compile Include="Assets\Scripts\levelSelectUI.cs" />
     <Compile Include="Assets\Scripts\mainMenuUI.cs" />
     <Compile Include="Assets\Scripts\MovementScript.cs" />

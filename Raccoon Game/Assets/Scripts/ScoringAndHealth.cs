@@ -32,13 +32,13 @@ public class ScoringAndHealth : MonoBehaviour
         else
         {
             //Update UI score here
-            scoreText.text = "Score: " + score + "/" + scoreToWin;
+            scoreText.text = "Progress: " + score + "/" + scoreToWin;
         }
     }
     void Start()
     {
         health = maxHealth;
-        scoreText.text = "Score: " + score + "/" + scoreToWin;
+        scoreText.text = "Progress: " + score + "/" + scoreToWin;
         healthText.text = "Health " + health + "/" + maxHealth;
     }
     public void DamagePlayer()

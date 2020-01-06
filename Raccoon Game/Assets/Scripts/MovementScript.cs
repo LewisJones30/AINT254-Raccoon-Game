@@ -16,19 +16,19 @@ public class MovementScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.W))
         {
             rb.AddRelativeForce(new Vector3(0.0f, 0.0f, movementSpeed * - 1));
         }
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D))
         {
             transform.Rotate(new Vector3(0.0f, (Input.GetAxis("Horizontal") * rotationSpeed * Time.fixedDeltaTime), 0.0f));
         }
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.S))
         {
             rb.AddRelativeForce(new Vector3(0.0f, 0.0f, movementSpeed));
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A))
         {
             transform.Rotate(new Vector3(0.0f, (Input.GetAxis("Horizontal") * rotationSpeed * Time.fixedDeltaTime), 0.0f));
         }

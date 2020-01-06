@@ -1,0 +1,7 @@
+Raccoon game context:
+You play as Ciri, a raccoon who is hungry for food in the back streets of a city.
+You have discovered that there are dumpsters around the back streets containing food, that occasionally leaks onto the floor.
+However, you aren't the only one and you must survive.
+The other raccoons aren't friendly and will attack you if you go near them. They are defending the dumpsters as it is their source of food.
+In 3 days time, you will have enough energy to leave the city.
+Can you survive?
