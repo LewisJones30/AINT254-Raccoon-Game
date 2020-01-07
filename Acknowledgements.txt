@@ -1,2 +1,3 @@
 Lock icon used on UI: https://www.iconfinder.com/icons/3671803/closed_lock_icon (Steve Schoger, Unknown publication date. Creative Commons License).
 Wall texture: https://www.stockunlimited.com/vector-illustration/brick-wall-texture_1449847.html (Unknown User, Unknown Publication, Creative Commons License)
+Flooring texture: https://www.textures.com/download/3dscans0553/136383 (Unknown Author/Publication date, License: https://www.textures.com/terms-of-use.html (Article 6))
