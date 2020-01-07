@@ -1425,9 +1425,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf85fdbbcdfeff54799b0b98c3b84eac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bestTime: {fileID: 0}
+  bestTime: {fileID: 1997065903}
   newHighScore: {fileID: 657160419}
-  playerTime: {fileID: 0}
+  playerTime: {fileID: 214865595}
 --- !u!1 &2127159267
 GameObject:
   m_ObjectHideFlags: 0

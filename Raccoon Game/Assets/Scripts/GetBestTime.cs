@@ -17,11 +17,13 @@ public class GetBestTime : MonoBehaviour
             {
                 bestTimeFloat = PlayerPrefs.GetFloat("BestTime");
                 playerTimeFloat = PlayerPrefs.GetFloat("PlayerTime");
+                PlayerPrefs.SetInt("lvl2Unlock", 1);
             }
             else if (SceneManager.GetActiveScene().name == "lvl2Complete")
             {
                 bestTimeFloat = PlayerPrefs.GetFloat("BestTimelvl2");
                 playerTimeFloat = PlayerPrefs.GetFloat("PlayerTimelvl2");
+                PlayerPrefs.SetInt("lvl3Unlock", 1);
             }
             else if (SceneManager.GetActiveScene().name == "lvl3Complete")
             {
@@ -33,7 +35,6 @@ public class GetBestTime : MonoBehaviour
             int seconds = Mathf.FloorToInt(bestTimeFloat - minutes * 60);
             Debug.Log(minutes.ToString());
             Debug.Log(seconds.ToString());
-            Debug.Log(PlayerPrefs.GetFloat("BestTime").ToString());
             if (minutes + seconds == 0)
             {
                 string bestTimeString = "No best time recorded.";
@@ -57,7 +58,7 @@ public class GetBestTime : MonoBehaviour
                 //Remove high score text, calculate player's best time
                 newHighScore.gameObject.SetActive(false); //Disable the high score message if the player has not beaten the last highest time.
                 int playerminutes = Mathf.FloorToInt(playerTimeFloat / 60f);
-                int playerseconds = Mathf.FloorToInt(playerTimeFloat - minutes * 60);
+                int playerseconds = Mathf.FloorToInt(playerTimeFloat - (playerminutes * 60));
                 playerTime.text = string.Format("Your time: {0:00}:{1:00}", playerminutes, playerseconds);
             }
 

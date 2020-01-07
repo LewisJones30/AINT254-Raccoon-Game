@@ -32,7 +32,8 @@ public class SoundPersist : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (SceneManager.GetActiveScene().name != "StartingScene" && SceneManager.GetActiveScene().name != "BestTimes" && SceneManager.GetActiveScene().name != "LevelSelect")
+        if (SceneManager.GetActiveScene().name != "StartingScene" && SceneManager.GetActiveScene().name != "BestTimes" && SceneManager.GetActiveScene().name != "LevelSelect"
+            && SceneManager.GetActiveScene().name != "InstructionsScene" && SceneManager.GetActiveScene().name != "IntroScene")
         {
             while (currentSource.volume != 0)
             {

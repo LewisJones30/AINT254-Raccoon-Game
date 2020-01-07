@@ -21,6 +21,10 @@ public class SceneNav : MonoBehaviour
     {
         SceneManager.LoadScene("LevelSelect");
     }
+    public void introduction()
+    {
+        SceneManager.LoadScene("IntroScene");
+    }
     public void StartGame()
     {
         //Load the first level

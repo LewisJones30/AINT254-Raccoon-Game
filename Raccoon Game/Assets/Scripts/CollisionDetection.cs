@@ -17,6 +17,7 @@ public class CollisionDetection : MonoBehaviour
     public Animator glowingAnim;
     [SerializeField]
     private SpawnObjects spawnerScript;
+    public AudioSource collectionTone;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +41,7 @@ public class CollisionDetection : MonoBehaviour
         {
 
             //Collision Detection - Add to score
+            collectionTone.Play();
             Destroy(other.gameObject);
             onCollisionHealthy.Invoke();
         }

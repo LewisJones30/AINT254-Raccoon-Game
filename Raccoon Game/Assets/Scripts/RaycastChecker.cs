@@ -23,21 +23,25 @@ public class RaycastChecker : MonoBehaviour
         healthscript = player.GetComponent<ScoringAndHealth>();
         warningText.enabled = false;
         time = defaultTimeToBeHit;
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireSphere(transform.position, 16);
     }
+    
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         Vector3 forward = transform.TransformDirection(Vector3.back);
-        if (Physics.SphereCast(transform.position, 8, forward * raycastLength, out hit))
+
+
+        if (Physics.SphereCast(transform.position, 12, forward * raycastLength, out hit))
         {
-            //Debug.Log(hit.collider.gameObject.name);
             if (hit.collider.gameObject.name == "Model")
             {
                 warningText.enabled = true;
                 warningText.text = "WARNING: Damage inflicted in: " + time + " seconds";
                 Debug.Log("Collision detected.");
-                time = time - Time.deltaTime;
+                time = time - Time.deltaTime;                                                                                                                                                                                                                                                                                           
                 if (time < 0.01)
                 {
 
@@ -48,9 +52,30 @@ public class RaycastChecker : MonoBehaviour
                 }
 
             }
-            else if (hit.collider.gameObject.name == "HealthyFood")
+            else if (hit.collider.gameObject.name == "HealthyFood" || hit.collider.gameObject.name == "HealthyFood (Clone)")
             {
-                Destroy(other);
+                Destroy(hit.transform.gameObject);
+                Debug.Log("Food destroyed! 111");
+
+            }
+            else if (hit.collider.gameObject.name == "DecayedFood" || hit.collider.gameObject.name == "DecayedFood (Clone)")
+            {
+                Destroy(hit.transform.gameObject);
+                Debug.Log("Food destroyed!");
+            }
+            else if (hit.collider.gameObject.name == "doublePoints" || hit.collider.gameObject.name == "doublePoints (Clone)")
+            {
+                Destroy(hit.transform.gameObject);
+                Debug.Log("Food destroyed!");
+            }
+            else if (hit.collider.gameObject.name == "doubleSpeed" || hit.collider.gameObject.name == "doubleSpeed (Clone)")
+            {
+                Destroy(hit.transform.gameObject);
+                Debug.Log("Food destroyed!");
+            }
+            else if (hit.collider.gameObject.name == "invulnerability" || hit.collider.gameObject.name == "invulnerability (Clone)")
+            {
+                Destroy(hit.transform.gameObject);
                 Debug.Log("Food destroyed!");
             }
             else

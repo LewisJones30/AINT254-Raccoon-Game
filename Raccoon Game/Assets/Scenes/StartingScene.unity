@@ -507,7 +507,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Level Select
+  m_Text: Start game
 --- !u!222 &849002036
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -938,7 +938,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 847, y: -2}
+  m_AnchoredPosition: {x: 34, y: -398}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1258831717
@@ -1143,6 +1143,7 @@ GameObject:
   - component: {fileID: 1606400665}
   - component: {fileID: 1606400664}
   - component: {fileID: 1606400667}
+  - component: {fileID: 1606400668}
   m_Layer: 5
   m_Name: btnLevelSelect
   m_TagString: Untagged
@@ -1167,7 +1168,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -771, y: 0}
+  m_AnchoredPosition: {x: 41, y: 64}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1606400664
@@ -1213,8 +1214,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1606400667}
-        m_MethodName: levelSelectNav
+      - m_Target: {fileID: 1606400668}
+        m_MethodName: introduction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1276,6 +1277,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ecfdabc17e41c2489a98dac675f33d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1606400668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606400662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 046ec788ec410634f862a87656147bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerScript: {fileID: 0}
 --- !u!1 &1649244136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,7 +1485,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -850, y: -626.00006}
+  m_AnchoredPosition: {x: 37, y: -175}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2065459929

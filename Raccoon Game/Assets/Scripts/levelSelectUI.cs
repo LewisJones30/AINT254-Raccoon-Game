@@ -22,13 +22,15 @@ public class levelSelectUI : MonoBehaviour
             //100% opacity for the level icon, 0% opacity for the lock icon
             level2.color = new Color(255, 255, 255, 255);
             lock2.color = new Color(255, 255, 255, 0);
-            level2btn.interactable = false;
+            level2btn.interactable = true;
+            lock2.enabled = false;
         }
         else
         {
             //~40% opacity for the level icon, 100% opacity for lock icon
             level2.color = new Color(255, 255, 255, 100);
             lock2.color = new Color(255, 255, 255, 255);
+
             level2btn.interactable = false;
         }
         if (PlayerPrefs.GetInt("lvl3Unlock") == 1)
@@ -36,6 +38,7 @@ public class levelSelectUI : MonoBehaviour
             //100% opacity for the level icon, 0% opacity for the lock icon
             level3.color = new Color(255, 255, 255, 255);
             lock3.color = new Color(255, 255, 255, 0);
+            lock3.enabled = false;
             level3btn.enabled = true;
         }
         else
@@ -43,6 +46,7 @@ public class levelSelectUI : MonoBehaviour
             //~40% opacity for the level icon, 100% opacity for lock icon
             level3.color = new Color(255, 255, 255, 100);
             lock3.color = new Color(255, 255, 255, 255);
+            lock3.enabled = false;
             level3btn.interactable = false;
         }
     }
