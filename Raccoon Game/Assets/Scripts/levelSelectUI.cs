@@ -46,7 +46,7 @@ public class levelSelectUI : MonoBehaviour
             //~40% opacity for the level icon, 100% opacity for lock icon
             level3.color = new Color(255, 255, 255, 100);
             lock3.color = new Color(255, 255, 255, 255);
-            lock3.enabled = false;
+            lock3.enabled = true;
             level3btn.interactable = false;
         }
     }

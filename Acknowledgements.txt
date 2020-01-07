@@ -1,4 +1,2 @@
 Lock icon used on UI: https://www.iconfinder.com/icons/3671803/closed_lock_icon (Steve Schoger, Unknown publication date. Creative Commons License).
-Stone texture used for walls: https://freestocktextures.com/texture/sandstone-sedimentary-wall,814.html (Unknown Author, Unknown Publication date, License: https://freestocktextures.com/support/)
-Second stone texture used for walls: https://freestocktextures.com/texture/wall-brick-concrete,707.html (Unknown Author, Unknown Publication date, License: https://freestocktextures.com/support/)
-Third stone texture used for walls: https://freestocktextures.com/texture/rusty-concrete-peeling,467.html (Unknown Author, Unknown Publication Date, License: https://freestocktextures.com/support/)
+Wall texture: https://www.stockunlimited.com/vector-illustration/brick-wall-texture_1449847.html (Unknown User, Unknown Publication, Creative Commons License)
